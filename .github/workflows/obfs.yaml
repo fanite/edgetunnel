@@ -34,7 +34,7 @@ jobs:
           cp -r _worker.js ../_worker.js
           git checkout --orphan obfs
           git rm -rf .
-          javascript-obfuscator ../_worker.js --output _worker.js --compact true  --self-defending true --string-array-threshold 1 --string-array-wrappers-count 5 --string-array-wrappers-type function --string-array-encoding rc4 --split-strings true --split-strings-chunk-length 5 --rename-globals true --rename-properties true --transform-object-keys true --numbers-to-expressions true
+          javascript-obfuscator ../_worker.js --output _worker.js --compact true  --self-defending true --string-array-threshold 1 --string-array-wrappers-count 5  --string-array-encoding rc4 --split-strings true --split-strings-chunk-length 5 --rename-globals true --rename-properties true --transform-object-keys true --numbers-to-expressions true
           git add _worker.js
           git commit -m "obfs"
           git push origin obfs --force
