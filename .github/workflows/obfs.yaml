@@ -29,6 +29,8 @@ jobs:
 
       - name: Run obfs
         run: |
+          git config --global user.email "bellong@vip.qq.com"
+          git config --global user.name "bellong"
           cp -r _worker.js ../_worker.js
           git checkout --orphan obfs
           git rm -rf .
